@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <style>
+        /* กำหนดสไตล์ให้กับตาราง */
+        table {
+            width: 100%;
+            height:200px;
+            border-collapse: collapse;
+        }
+
+        /* กำหนดสไตล์ให้กับเซลล์ของตาราง */
+        td {
+            width: 50%;
+            height: 100%;
+            text-align: center ;
+            vertical-align: middle;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        /* เซลล์ที่ 1 - กล่องแรก */
+        .box1 {
+            background-color: #1e1a19;
+        }
+
+        /* เซลล์ที่ 2 - กล่องที่ 2 */
+        .box2 {
+            background-color: #4700f9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ตารางที่ประกอบด้วย 2 เซลล์ -->
+    <table>
+        <tr>
+            <td class="box1">First cell</td>
+            <td class="box2">Second cell</td>
+        </tr>
+    </table>
+
+</body>
+</html>

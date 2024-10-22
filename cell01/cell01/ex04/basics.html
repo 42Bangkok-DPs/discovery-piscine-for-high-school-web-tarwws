@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <style>
+        /* กำหนดพื้นหลังสีชมพู */
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+
+        /* กำหนดลักษณะของชื่อเรื่อง */
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 4em;
+        }
+
+        /* กำหนดรูปภาพให้แสดงเคียงข้างกัน */
+        .images-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .images-container img {
+            width: 300px;
+            height: auto;
+        }
+
+        /* กำหนดลิงก์ใต้แต่ละรูปภาพ */
+        .images-container a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        /* กำหนดเส้นแนวนอน */
+        hr {
+            margin-top: 40px;
+        }
+
+        /* กำหนดข้อความลิขสิทธิ์ */
+        .copyright {
+            text-align: right;
+            font-style: italic;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>shop$</h1>
+
+    <!-- รูปภาพสองรูปเคียงข้างกัน -->
+    <div class="images-container">
+        <div>
+            <img src="lazada-2.webp" alt="ร้านค้าออนไลน์ 1">
+            <a href="https://www.lazada.co.th/?dsource=share&laz_share_info=1293748573_1_9300_100642496081_1293750573_null&laz_token=b62100687eb371c522aedad419c9987b&trafficFrom=17449020_303586&laz_trackid=2:mm_290511160_169702503_2126502503:clkgl3s7a1iap7u2kmqok1&mkttid=clkgl3s7a1iap7u2kmqok1#?" target="_blank">lazada</a>
+        </div>
+        <div>
+            <img src="shopee-logo-1.webp" alt="ร้านค้าออนไลน์ 2">
+            <a href="https://shopee.co.th/?gad_source=1&gclid=Cj0KCQjw99e4BhDiARIsAISE7P-rF4lINK4_sLYuj4abf6P_m-UkVddh0nZOijJmPf4MUlwedNTQM4YaAu4TEALw_wcB" target="_blank">Shopee</a>
+        </div>
+    </div>
+
+    <!-- เส้นแนวนอน -->
+    <hr>
+
+    <!-- ข้อความลิขสิทธิ์ -->
+    <div class="copyright">
+        © kmeeanan 2021
+    </div>
+</body>
+</html>
+
