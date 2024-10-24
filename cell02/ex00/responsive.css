@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+    height:200px;
+    border-collapse: collapse;
+}
+
+/* กำหนดสไตล์ให้กับเซลล์ของตาราง */
+td {
+    width: 50%;
+    height: 100%;
+    text-align: center ;
+    vertical-align: middle;
+    color: white;
+    font-size: 1.5em;
+}
+
+/* เซลล์ที่ 1 - กล่องแรก */
+.box1 {
+    background-color: #1e1a19;
+}
+
+/* เซลล์ที่ 2 - กล่องที่ 2 */
+.box2 {
+    background-color: #4700f9;
+}
