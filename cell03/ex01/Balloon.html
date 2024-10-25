@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>balloon</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .balloon {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="balloon" id="balloon"></div>
+
+    <script>
+        const balloon = document.getElementById('balloon');
+        let size = 200;  // ขนาดเริ่มต้นของลูกโป่ง
+        let colorIndex = 0; // ดัชนีสำหรับการเปลี่ยนสี
+        const colors = ['red', 'green', 'blue'];  // ลำดับสีที่ต้องการ
+
+        // ฟังก์ชันสำหรับการคลิกบนลูกโป่ง
+        balloon.addEventListener('click', () => {
+            size += 10;  // เพิ่มขนาดลูกโป่ง 10px
+
+            if (size > 420) {  // ถ้าขนาดเกิน 420px ให้ลูกโป่งระเบิด
+                size = 200;  // รีเซ็ตขนาดกลับไปที่ 200px
+            }
+
+            balloon.style.width = size + 'px';
+            balloon.style.height = size + 'px';
+
+            // เปลี่ยนสีตามลำดับ
+            balloon.style.backgroundColor = colors[colorIndex];
+
+            colorIndex = (colorIndex + 1) % colors.length; // เปลี่ยนดัชนีสี
+        });
+
+        // ฟังก์ชันสำหรับการหดตัวเมื่อเมาส์อยู่บนลูกโป่ง
+        balloon.addEventListener('mouseover', () => {
+            if (size > 200) {
+                size -= 5;  // ลดขนาดลูกโป่งลง 5px
+                balloon.style.width = size + 'px';
+                balloon.style.height = size + 'px';
+
+                // เปลี่ยนสีในลำดับย้อนกลับ
+                colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+                balloon.style.backgroundColor = colors[colorIndex];
+            }
+        });
+    </script>
+</body>
+</html>
